@@ -96,3 +96,14 @@ vim.keymap.set("n", "<space><space>x","<cmd>source %<CR>")
 -- Floaterminal
 vim.keymap.set('n', '<A-t>', '<cmd>Floaterminal<CR>', opts)
 
+-- Clear highlight from search
+vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search hl", silent = true})
+
+-- highlight yanked
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Hightlight when yanking (copying)",
+    group = vim.api.nvim_create_augroup("kickstart-hightlight-yank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
