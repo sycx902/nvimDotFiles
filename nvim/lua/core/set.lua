@@ -9,6 +9,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+vim.opt.autoindent = true
 
 vim.opt.wrap = false
 
@@ -32,6 +33,4 @@ vim.opt.colorcolumn = "0"
 --vim.cmd.colorscheme("colorscheme your-colorscheme")  
 --vim.api.nvim_set_hl(0, "LineNr", { fg = "#fff" })  -- change fg to your preferred color
 --vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })  -- optional: highlight current line number
-vim.o.autoindent = true
-
 
